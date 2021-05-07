@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/**
+ * @author Prénom Nom courriel
+ *
+ * TABLE DES MATIERES
+ * Normalize
+ * Utilitaires
+ * Charte typographique
+ * Menu
+ * Grille
+ * Mise en page
+ *** Contenus principal et complémentaire
+ *** Architecture des CSS (liste de définitions)
+ *** Pied de page
+ */
+
+/* Normalize
+   ========================================================================== */
+@import url(_normalize.css);
+
+/* Utilitaires
+   ========================================================================== */
+@import url(_utilitaires.css);
+
+/* Charte typographique
+   ========================================================================== */
+@import url(_typo.css);
+
+
+/* Mise en page
+   ========================================================================== */
+
+
+.cards {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 601px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas:
+                "a a b"
+    "c d d" "e e f";
+    }
+
+    .card1 {
+        grid-area: a;
+        color:white;
+
+    }
+
+    .card2 {
+        grid-area: b;
+    }
+
+    .card3 {
+        grid-area: c;
+    }
+
+    .card4 {
+        grid-area: d;
+    }
+
+    .card5 {
+        grid-area: e;
+        color:white;
+    }
+
+    .card6 {
+        grid-area: f;
+    }
+
+}
+.cards .cards__div {
+    background-color: black;
+    margin-bottom:10px;
+}
+.cards .cards__div:nth-child(2) {
+    background-color:brown;
+    margin-bottom:10px;
+}
+.cards .cards__div:nth-child(3) {
+    background-color:black;
+    margin-bottom:10px;
+}
+.cards .cards__div:nth-child(4) {
+    background-color:lightgoldenrodyellow;
+    margin-bottom:10px;
+}
+.cards .cards__div:nth-child(5) {
+    background-color:brown;
+    margin-bottom:10px;
+}
+.cards .cards__div:nth-child(6) {
+    background-color:black;
+    margin-bottom:10px;
+}
+@media (min-width: 600px) {
+    .cards .cards__div {
+        margin-bottom:0;
+    }
+}
+.img_1{
+    margin: 110px 60px;
+}
+.img_2,
+.img_3{
+    padding: 90px;
+    margin-left: 10px;
+}
+
+h1,
+h2,
+p{
+    margin:30px;
+    padding: 0px 20px
+}
+
+footer {
+
+}
+
+header {
+font-size: 10rem;
+    background-color: gold;
+}
+
+
+/*** Pied de page ***/
+footer{
+    background-color: gold;
+    padding: 20px;
+}
+.credits {
+text-align: center;
+    }

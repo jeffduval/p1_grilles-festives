@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <title>Grid Template Areas - test 1 </title>
+  <style>
+
+        .cards {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        @media (min-width: 600px) {
+            .cards {
+                display: grid;
+                grid-template-columns: 1fr 200px 1fr 1fr;
+                grid-gap: 10px;
+                grid-template-areas:
+                "a a a b"
+                "c c d d"
+                ". e e ."
+                "f g g g";
+            }
+
+
+            .card1 {
+                grid-area: a;
+            }
+
+            .card2 {
+                grid-area: b;
+            }
+
+            .card3 {
+                grid-area: c;
+            }
+
+            .card4 {
+                grid-area: d;
+            }
+
+            .card5 {
+                grid-area: e;
+            }
+
+            .card6 {
+                grid-area: f;
+            }
+
+            .card7 {
+                grid-area: g;
+            }
+        }
+
+
+        .cards .cards__div {
+            background-color: #e5dbff;
+            border: 1px solid #d0bfff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom:20px;
+        }
+        @media (min-width: 600px) {
+            .cards .cards__div {
+                margin-bottom:0;
+            }
+        }
+
+        /* styles de base */
+        .conteneur{
+            max-width:800px;
+            margin:auto;
+        }
+        img{
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="conteneur cards">
+
+        <div class="cards__div card1">
+            <h2>Carte 1 (a)</h2>
+            <img src="http://placehold.it/800x300" alt="Image qui n'en est pas une"/>
+        </div>
+        <div class="cards__div card2">
+            <h2>Carte 2 (b)</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur assumenda, beatae deleniti, error esse et ex explicabo optio porro quam quasi recusandae, tempora tempore vero vitae voluptate. Quis, voluptates!</p>
+
+        </div>
+
+        <div class="cards__div card3">
+            <h2>Carte 3 (c)</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur assumenda, beatae deleniti, error esse et ex explicabo optio porro quam quasi recusandae, tempora tempore vero vitae voluptate. Quis, voluptates!</p>
+
+        </div>
+        <div class="cards__div card4">
+            <h2>Carte 4 (d)</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur assumenda, beatae deleniti, error esse et ex explicabo optio porro quam quasi recusandae, tempora tempore vero vitae voluptate. Quis, voluptates!</p>
+
+        </div>
+        <div class="cards__div card5">
+            <h2>Carte 5 (e)</h2>
+            <blockquote>
+                <p>« Lorem ipsum dolor sit amet! »</p>
+            </blockquote>
+        </div>
+
+    <div class="cards__div card6">
+        <h2>Carte 6 (f)</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam aspernatur assumenda, beatae deleniti, error esse et ex explicabo optio porro quam quasi recusandae, tempora tempore vero vitae voluptate. Quis, voluptates!</p>
+
+    </div>
+
+    <div class="cards__div card7">
+        <h2>Carte 7 (g)</h2>
+        <img src="http://placehold.it/800x300" alt="Image qui n'en est pas une"/>
+    </div>
+
+
+</main>
+</body>
+</html>
