@@ -9,10 +9,14 @@
  * Charte typographique
  * Menu
  * Grille
- * Mise en page
- *** Contenus principal et complémentaire
- *** Architecture des CSS (liste de définitions)
- *** Pied de page
+ * Mise en page des cards
+ *Traitement des images*
+ *Textes*
+ *Sections*
+ ****header****
+ ****footer****
+
+
  */
 
 /* Normalize
@@ -28,13 +32,11 @@
 @import url(_typo.css);
 
 
-/* Mise en page
+/* Mise en page des cards
    ========================================================================== */
 
-
 .cards {
-    margin: 0;
-    padding: 0;
+
     list-style: none;
 }
 
@@ -69,6 +71,7 @@
     .card5 {
         grid-area: e;
         color:white;
+
     }
 
     .card6 {
@@ -76,66 +79,98 @@
     }
 
 }
-.cards .cards__div {
+.cards .cards__div{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.cards .cards__div:nth-child(1) {
     background-color: black;
-    margin-bottom:10px;
+
 }
 .cards .cards__div:nth-child(2) {
-    background-color:brown;
-    margin-bottom:10px;
+
+
 }
 .cards .cards__div:nth-child(3) {
-    background-color:black;
-    margin-bottom:10px;
+    display: flex;
+
 }
 .cards .cards__div:nth-child(4) {
     background-color:lightgoldenrodyellow;
-    margin-bottom:10px;
+
 }
 .cards .cards__div:nth-child(5) {
     background-color:brown;
-    margin-bottom:10px;
+    padding-top: 1.5rem;
+
+
 }
 .cards .cards__div:nth-child(6) {
-    background-color:black;
-    margin-bottom:10px;
+
+
+
 }
 @media (min-width: 600px) {
     .cards .cards__div {
-        margin-bottom:0;
+
     }
 }
-.img_1{
-    margin: 110px 60px;
-}
-.img_2,
-.img_3{
-    padding: 90px;
-    margin-left: 10px;
+
+/***Traitement des images***/
+
+img{
+    min-width: 100%;
+
 }
 
-h1,
+/***Textes***/
+
+h1{
+    color:white;
+    padding: 1.5rem 0 0 0 ;
+}
 h2,
 p{
-    margin:30px;
-    padding: 0px 20px
+    /*margin-left:30px;*/
+    padding: 0 0 1.5rem 0;
+    color:white;
 }
-
-footer {
-
-}
-
-header {
-font-size: 10rem;
+.titre{
+    color: black;
+    padding: 3rem 2rem;
     background-color: gold;
 }
+.p2{
+    color: black;
+}
+.eloge{
+    color:black;
+    padding: 1.5rem 0 0 0;
+}
+.quote{
+    color:white;
+    padding: 1.5rem 0 0 1rem;
 
+}
+/***Sections***/
+header {
+font-size: 3rem;
+    /*background-color: gold;*/
+    opacity: 0.8;
+}
+/***body***/
+.body{
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
 
-/*** Pied de page ***/
+/*** footer ***/
 footer{
     background-color: gold;
     padding: 20px;
+    opacity: 0.8;
 }
 .credits {
 text-align: center;
+    color: black;
     }

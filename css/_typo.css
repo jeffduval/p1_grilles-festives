@@ -36,7 +36,7 @@
 h1,
 .h1,
 h2,
-.h2,{
+.h2 {
     font-family: Merriweather, sans-serif ;
 }
 
@@ -84,10 +84,13 @@ h1,
 @media (min-width: 800px) {
     h1,
     .h1 { /* = 48px */
-        font-size: 4.8rem;
+        font-size: 3.2rem;
     }
 }
 
+.quote{
+    font-size: 2.4rem;
+}
 h2,
 .h2 { /* = 24px */
     font-size: 2.4rem;
