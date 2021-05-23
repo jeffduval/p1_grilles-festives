@@ -1,22 +1,17 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author Jean-François Duval 2067006@csfoy.ca
  *
- * TABLE DES MATIERES
- * Normalize
- * Utilitaires
- * Charte typographique
- * Menu
- * Grille
- * Mise en page des cards
+ ******************* TABLE DES MATIERES***********************
+ * Charte typographique*
+ * Mise en page des cards*
  *Traitement des images*
  *Textes*
+ *animation titre*
  *Sections*
  ****header****
  ****footer****
-
-
  */
 
 /* Normalize
@@ -32,12 +27,15 @@
 @import url(_typo.css);
 
 
+
+
 /* Mise en page des cards
    ========================================================================== */
 
 .cards {
 
     list-style: none;
+
 }
 
 @media (min-width: 601px) {
@@ -48,11 +46,12 @@
         grid-template-areas:
                 "a a b"
     "c d d" "e e f";
+
     }
 
     .card1 {
         grid-area: a;
-        color:white;
+        color: white;
 
     }
 
@@ -70,7 +69,8 @@
 
     .card5 {
         grid-area: e;
-        color:white;
+        color: white;
+
 
     }
 
@@ -79,37 +79,92 @@
     }
 
 }
-.cards .cards__div{
+
+.cards .cards__div {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+
+}
+
+@media (min-width: 601px) {
+    .cards .cards__div {
+        padding: 3rem;
+
+    }
+}
+
+.cards .cards__div:nth-child(1) {
+    background-color: black;
+    border: solid 0.1em gold
+}
+@media(min-width: 949px){
+.cards .cards__div:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+}
+@media(min-width: 949px){
+    .cards .cards__div:nth-child(1) .float_reactif{
+        float: right;
+        max-width: 200px;
+        margin:5rem 2rem 0 9rem;
+
+    }
 }
 .cards .cards__div:nth-child(1) {
     background-color: black;
 
 }
+
 .cards .cards__div:nth-child(2) {
+    padding: 2rem 0 0 0;
 
-
+}
+@media(min-width: 601px){
+.cards .cards__div:nth-child(2) {
+    padding:  0;
+}
 }
 .cards .cards__div:nth-child(3) {
-    display: flex;
-
+    padding: 2rem 0 0 0;
+}
+@media(min-width: 601px){
+.cards .cards__div:nth-child(3) {
+    padding:  0;
+}
 }
 .cards .cards__div:nth-child(4) {
-    background-color:lightgoldenrodyellow;
+    background-color: lightgoldenrodyellow;
+    border: solid 0.1em gold
 
 }
+
 .cards .cards__div:nth-child(5) {
-    background-color:brown;
-    padding-top: 1.5rem;
-
-
+    background-color: brown;
+    border: solid 0.1em gold;
+    padding-top: 2rem;
+    margin-top: 2rem;
 }
-.cards .cards__div:nth-child(6) {
 
-
-
+@media (min-width: 601px) {
+    .cards .cards__div:nth-child(5) {
+        padding-top: 4rem;
+        margin-bottom: 1rem;
+    }
 }
+
+    .cards .cards__div:nth-child(6) {
+padding:2rem 0 2rem 0;
+    }
+    @media(min-width: 601px){
+        .cards .cards__div:nth-child(6) {
+            padding:0 ;
+        }
+    }
+
+
 @media (min-width: 600px) {
     .cards .cards__div {
 
@@ -118,59 +173,127 @@
 
 /***Traitement des images***/
 
-img{
+img {
     min-width: 100%;
 
+
 }
+@media(max-width: 949px) {
+    .float_reactif {
+        display: none;
+    }
+}
+
+
 
 /***Textes***/
 
-h1{
-    color:white;
-    padding: 1.5rem 0 0 0 ;
-}
-h2,
-p{
-    /*margin-left:30px;*/
-    padding: 0 0 1.5rem 0;
-    color:white;
-}
-.titre{
-    color: black;
-    padding: 3rem 2rem;
-    background-color: gold;
-}
-.p2{
-    color: black;
-}
-.eloge{
-    color:black;
+h1 {
+    color: white;
     padding: 1.5rem 0 0 0;
 }
-.quote{
-    color:white;
+
+h2,
+p {
+    padding: 0 0 1.5rem 0;
+    color: white;
+}
+
+.p1{
+
+    column-width: 250px;
+
+}
+@media(min-width: 949px){
+    .p1{
+        margin-top:-1rem;
+    }
+}
+.p2 {
+    color: black;
+   column-width: 250px;
+
+}
+@media(min-width: 949px){
+    .p2{
+        margin-top:3rem;
+    }
+}
+.p3{
+    column-width: 250px;
+}
+@media(min-width: 949px){
+    .p3{
+        margin-top:5rem;
+    }
+}
+.eloge {
+    color: black;
+    padding: 1.5rem 0 0 0;
+}
+
+.quote {
+    color: white;
     padding: 1.5rem 0 0 1rem;
 
 }
+
+@media(min-width:949px){
+    .synopsis{
+        float: left;
+margin-top: -2rem;
+    }
+}
+/*animation titre*/
+
+.titre {
+    color: black;
+    padding: 3rem 2rem;
+    background-color: gold;
+    animation-duration: 1s;
+    animation-name: slidein;
+    border-style: double ;
+    border-color:  lightgoldenrodyellow ;
+    border-width:0.5rem;
+
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+
+    }
+
+    to {
+        /*margin-right: 0;*/
+
+    }
+}
 /***Sections***/
 header {
-font-size: 3rem;
+    font-size: 3rem;
     /*background-color: gold;*/
-    opacity: 0.8;
+    opacity: 0.7;
 }
+
 /***body***/
-.body{
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+.body {
+    padding-right: 1rem;
+    padding-left: 1rem;
+
 }
 
 /*** footer ***/
-footer{
+footer {
     background-color: gold;
     padding: 20px;
-    opacity: 0.8;
+    opacity: 0.7;
+    border-top: solid black 1rem;
 }
+
 .credits {
-text-align: center;
+    text-align: center;
     color: black;
-    }
+
+}
