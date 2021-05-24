@@ -3,33 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="css/styles.css">
     <title>P1 Grilles festives</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="description"
+          content="Le projet grilles festives nous permet de raffiner les mises en page css à l'aide des grid templates areas ">
+    <meta name="keywords" content="P1 grilles festives, Jean-François Duval,
+    Techniques d’intégration multimédia, Cégep de Sainte-Foy, grid template areas, css">
+    <meta name="author" content="Jean-François Duval">
+    <!--    <link rel="stylesheet" href="css/styles.css">-->
+    <link rel="stylesheet" href="css/styles.min.css">
 </head>
 <body class="body">
-    <header class="header--titre" id="header" role="banner">
-        <p class="titre">Littérature</p>
-    </header>
+<header class="header--titre" id="header" role="banner">
+    <p class="titre">Littérature</p>
+</header>
 <main class="conteneur cards" id="main" role="main">
     <div class="cards__div card1">
+
         <h1>Dosteïovski:
             <br>
             Les Frères Karamazov
         </h1>
-        <picture class="float_reactif">
-            <source media="(min-width:600px)" srcset="images/fiodor_min_600.jpg">
-            <source media="(min-width:801px)" srcset="images/fiodor_min_800.jpg">
-            <img src="../images/m03/accueil_photo1_1200.jpg" alt="végétation de l'île">
-        </picture>
+
         <h2 class="synopsis">Synopsis</h2>
-        <p class="p1">L'odieux Féodor Karamazov est assassiné. De ses trois fils - Dimitri le débauché, Ivan le savant et l'ange
+        <picture class="img_card1">
+            <source media="(min-width:1200px)" srcset="images/fiodor_card1.jpg">
+            <img src="images/fiodor_card1.jpg" alt="Fiodor Dosteievski">
+        </picture>
+        <p class="p1">L'odieux Féodor Karamazov est assassiné. De ses trois fils - Dimitri le débauché, Ivan le savant
+            et l'ange
             Aliocha - tous ont pu le tuer, tous ont au moins désiré sa mort. Drame familial, drame de la conscience
             humaine, interrogations sur la raison d'être de l'homme, tableau de la misère, de l'orgueil, de l'innocence,
-            de la Russie au lendemain des réformes de <time>1860</time>, orgies, miracles, la richesse de ce roman de Dostoïevski,
-            son dernier et considéré comme son chef d'oeuvre, ne sera jamais épuisée. </p>
+            de la Russie au lendemain des réformes de
+            <time>1860</time>
+            , orgies, miracles, la richesse de ce roman de Dostoïevski,
+            son dernier et considéré comme son chef d'oeuvre, ne sera jamais épuisée.
+        </p>
     </div>
     <div class="cards__div card2">
-        <img class="img_1" src="images/couv_livre.jpg" alt="Couverture du livre Les Frères Karamazov">
+        <img class="img_1" src="images/couverture_livre_666.jpg" alt="Couverture du livre Les Frères Karamazov">
     </div>
     <div class="cards__div card3">
         <img class="img_2" src="images/old_typewriter.png"
@@ -37,7 +55,8 @@
     </div>
     <div class="cards__div card4">
         <h2 class="eloge">Éloge aux Frères Karamazov</h2>
-        <p class="p2">Les trois frères symbolisent trois moments de la réflexion, trois états de l'homme russe en phase avec son
+        <p class="p2">Les trois frères symbolisent trois moments de la réflexion, trois états de l'homme russe en phase
+            avec son
             histoire : Dmitri le passionné, amoureux, emporté, violent, bouillonnant, déchaîné comme l'immense espace
             russe. Ivan le rationaliste, séduit par les idées occidentales, en proie au doute permanent, au
             questionnement indéfini sur l'existence de Dieu, sa compatibilité avec le mal, et Aliocha, qui donne sens à
@@ -53,9 +72,10 @@
     <div class="cards__div card5">
         <q class="quote">Quelqu'un est entré dans
             mon âme à cet instant.
-            </q>
+        </q>
 
-        <p class="p3">Les Frères Karamazov sont tout. Une enquête policière un livre de procès un minitieux examen de l'âme humaine
+        <p class="p3">Les Frères Karamazov sont tout. Une enquête policière un livre de procès un minitieux examen de
+            l'âme humaine
             et une profonde déclaration d'amour à la Russie, avec son lot d'espoirs et de déceptions(l'auteur n'aime pas
             beaucoup les socialistes).Mais surtout, et c'est un "surtout" totalement subjectif, ce livre parle de
             religion comme nul autre. Le monologue du Grand Inquisiteur, comme les discours du Staretz Zossima, sont
@@ -66,10 +86,12 @@
         </p>
     </div>
     <div class="cards__div card6">
-        <img class="img_3" src="images/librairie_vieux_livres_600.png" alt="vieille librairie">
+        <img class="img_3" src="images/librairie_vieux_livres_600.jpg" alt="vieille librairie">
     </div>
 </main>
 <footer class="credits" id="footer" role="contentinfo">
-    <p class="credits">Crédits, Jean-François Duval, intégration 2, 2021</p></footer>
+    <p class="credits">Réalisation de Jean-François Duval pour le cours Intégration II, <br>en Techniques d’intégration
+        multimédia, Cégep de Sainte-Foy</p>
+</footer>
 </body>
 </html>
